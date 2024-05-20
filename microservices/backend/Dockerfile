@@ -9,9 +9,9 @@ COPY requirements.txt .
 RUN pip install -r requirements.txt
 
 # copy the app data into the docker image
-COPY . .
+COPY ./app .
 
 EXPOSE 3000
 
 # launch the flask api server
-CMD [ "python", "main.py"]
+CMD [ "python", "main.py" ]

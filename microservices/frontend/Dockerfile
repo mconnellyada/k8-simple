@@ -1,7 +1,8 @@
-FROM nginx
+FROM nginx:latest
 
-COPY /app/index.html /var/share/nginx/html
+COPY /app /usr/share/nginx/html
 
 EXPOSE 80
 
-RUN nginx
+# Start Nginx when the container starts
+CMD ["nginx", "-g", "daemon off;"]

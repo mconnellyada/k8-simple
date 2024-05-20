@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+    <body>
+        <h1>Hello world. Please see the console for the data fetched from the backend microservice.</h1>
+    </body>
+    <script>
+        const apiUrl = 'http://196.168.1.166:3000/get';
+        fetch(apiUrl).then(response => {
+            return response.json()
+        }).then(data => {
+            console.log(data)
+        })
+    </script>
+</html>
